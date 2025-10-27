@@ -1,0 +1,82 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Sensitive / environment
+.env
+*.env
+
+# Local python packaging
+local_settings.py
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Temporary files
+*.pdf
+tmp_*
+
+# FAISS / vector stores (if you ever save them)
+*.index
+*.faiss
+
+# Logs / database files
+*.log
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
