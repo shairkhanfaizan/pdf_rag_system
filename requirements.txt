@@ -11,3 +11,4 @@ python-dotenv
 pypdf 
 sentence-transformers
 huggingface-hub
+langchain-huggingface
