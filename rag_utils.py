@@ -2,6 +2,7 @@ from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnableLambda
@@ -22,7 +23,7 @@ def answer_from_pdf(pdf_path, question):
     chunks = splitter.split_documents(docs)
 
     # 3. Create embeddings and retriever
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
     vectorstore = FAISS.from_documents(chunks, embedding=embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 
